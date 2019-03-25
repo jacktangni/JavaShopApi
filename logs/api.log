@@ -1,0 +1,7 @@
+2019-03-25 12:50:15,004 [DEBUG] [main] o.s.web.context.support.GenericWebApplicationContext [AbstractApplicationContext.java : 594] Refreshing org.springframework.web.context.support.GenericWebApplicationContext@16aa8654
+2019-03-25 12:50:21,050 [DEBUG] [main] o.s.w.s.mvc.method.annotation.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java : 350] 18 mappings in 'requestMappingHandlerMapping'
+2019-03-25 12:50:21,973 [DEBUG] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping [SimpleUrlHandlerMapping.java : 139] Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-03-25 12:50:22,327 [DEBUG] [main] o.s.w.s.mvc.method.annotation.RequestMappingHandlerAdapter [RequestMappingHandlerAdapter.java : 622] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-03-25 12:50:22,451 [DEBUG] [main] o.s.web.servlet.handler.SimpleUrlHandlerMapping [SimpleUrlHandlerMapping.java : 139] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-03-25 12:50:22,470 [DEBUG] [main] o.s.w.s.m.m.annotation.ExceptionHandlerExceptionResolver [ExceptionHandlerExceptionResolver.java : 302] ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-03-25 12:50:24,939 [DEBUG] [Thread-3] o.s.web.context.support.GenericWebApplicationContext [AbstractApplicationContext.java : 1002] Closing org.springframework.web.context.support.GenericWebApplicationContext@16aa8654, started on Mon Mar 25 12:50:15 CST 2019

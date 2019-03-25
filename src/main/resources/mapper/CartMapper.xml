@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD  Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.httpapi.yyy.dao.CartDao">
+    <!--添加商品进入购物车-->
+    <insert id="addCart" parameterType="int" >
+        insert into shop_cart(user_id,commodity_id) values (#{userid},#{shopid})
+    </insert>
+    <!--获取购物车里面的商品信息-->
+    <select id="selectCartInfo" parameterType="int" resultType="hashMap">
+       SELECT a.cart_nums,a.id as cid,b.* from shop_cart a INNER JOIN shop_commodity b on a.commodity_id=b.id and user_id=#{userid}
+    </select>
+    <!--删除购物车里面的商品信息-->
+    <delete id="deleteCartInfo">
+       delete from shop_cart where id=#{cid}
+    </delete>
+    <!--检查商品有没有添加到购物车-->
+    <select id="checkCart" parameterType="int" resultType="hashMap">
+        select * from shop_cart where user_id = #{userid} and commodity_id = #{shopid}
+    </select>
+</mapper>

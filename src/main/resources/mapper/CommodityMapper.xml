@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD  Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.httpapi.yyy.dao.CommodityDao">
+   <select id="selectCommodity" parameterType="Integer" resultType="com.httpapi.yyy.bean.Commodity">
+      select * from shop_commodity order by id desc limit #{startPage},#{totalPage}
+   </select>
+
+    <select id="getCommodityInfo" parameterType="int" resultType="com.httpapi.yyy.bean.Commodity">
+      select * from shop_commodity where id = #{id}
+    </select>
+    <!--根据商品名称模糊查询商品
+    <select id="getCommodityByBrand" parameterType="String" resultType="com.httpapi.yyy.bean.Commodity">
+       select * from shop_commodity where  commodity_brand like '${name}'
+    </select>-->
+    <!--根据商品名称分类查找商品-->
+    <select id="getCommodityByClass" parameterType="String" resultType="com.httpapi.yyy.bean.Commodity">
+       select * from shop_commodity where  commodity_brand = #{brand}
+    </select>
+</mapper>

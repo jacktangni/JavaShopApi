@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: dev
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+logging:
+  path: logs/
+  file: api.log
